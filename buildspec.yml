@@ -12,8 +12,8 @@ phases:
             - 'npm run build'    
     post_build:        
         commands:            
-            - 'aws s3 sync "public/" "s3://website-test-nica" --delete --acl "public-read"
-'artifacts:    
+            - 'npm run develop'
+    artifacts:    
     base-directory: public    
     files:        
         - '**/*'    
